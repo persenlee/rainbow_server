@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>图库</title>
+</head>
+<body>
+{% load static %}
+{% load tags %}
+<!--header-->
+<header class="cd-header">
+			<div id="cd-logo">
+                <a href="#0">
+                    {% if user and user.avatr %}
+                     <img src="{{ user.avatar }}">
+                    {% else %}
+                     <img src="{% static 'image_browser/images/default-avatar.png' %}">
+                    {% endif %}
+                </a>
+                <span>
+                    {% if user %}
+                        {{ user.username }}
+                    {% endif %}
+                </span>
+            </div>
+			<a class="cd-menu-trigger" href="#main-nav"><span></span></a>
+</header>
+
+<template id="tag">
+    <li class="tag" id-value="">
+        <a href="tag"></a>
+    </li>
+</template>
+
+<!--content-->
+<div id="main-content" class="grid">
+{% for image in image_list %}
+    <div class="item" id="item">
+     <div class="item-content">
+        <a  href="{{ image.src }}">
+          <img src="{{ image.thumb_src }}">
+        </a>
+        <div class="bar">
+             <a href="like" class="like" image-value="{{image.id}}" like-value="{{i_likes|get_item:image.id}}">
+                 {% if i_likes|get_item:image.id %}
+                <img class="like-on" src="{% static 'image_browser/images/heart-1.png' %}">
+                 {% else %}
+                <img class="like-off" src="{% static 'image_browser/images/heart-0.png' %}">
+                 {% endif %}
+             </a>
+            <span>&nbsp;{{ image_likes|get_item:image.id }}</span>
+            <ol class="tag-list">
+                {% for tag_id in image.tags|decode_json %}
+                <li class="tag" id-value="{{ tag_id }}">
+                    <a href="tag">{{tag_list|get_tag_name:tag_id}}</a>
+                </li>
+                {% endfor %}
+            </ol>
+            <a class="tag-add">
+                <img src="{% static 'image_browser/images/tag-add.png' %}">
+            </a>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+</div>
+
+
+<!--page indicator-->
+<div class="paginator">
+    <span class="prev">
+        {% if image_list.has_previous %}
+            <a href="?page={{ image_list.previous_page_number }}">&lt;前页</a>
+        {% endif %}
+    <span>
+    {% for page_number in page_range %}
+        {% ifequal page_number  image_list.number %}
+            <span class="current">
+               {{ page_number }}
+            </span>
+        {% else %}
+            <span class="other">
+             <a href="?page={{ page_number }}">{{ page_number }}</a>
+            </span>
+        {% endifequal %}
+    {% endfor %}
+
+    <span class="next">
+        {% if image_list.has_next %}
+            <a href="?page={{ image_list.next_page_number }}">后页&gt;</a>
+        {% endif %}
+    </span>
+</div>
+
+<!-- Infinite Scroll -->
+<div class="page-load-status" num_pages="{{image_list.paginator.num_pages}}">
+  <div class="loader-ellips infinite-scroll-request">
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+  </div>
+  <p class="infinite-scroll-last">就这样看完啦</p>
+  <p class="infinite-scroll-error">oops 服务器开小差了</p>
+</div>
+
+<!--pop menu-->
+<div class="cd-shadow-layer"></div>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#0"><span>首页</span></a></li>
+            <li><a href="#0"><span>我的收藏</span></a></li>
+            <li><a href="#0"><span>个人中心</span></a></li>
+            <li><a href="#0"><span>联系我们</span></a></li>
+        </ul>
+        <a href="#0" class="cd-close-menu">关闭<span></span></a>
+    </nav>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--Tag menu -->
+<ul class="tag-menu">
+    {% for tag in tag_list %}
+    <li id-value="{{ tag.id }}">
+        <!--<i class="fa"></i>-->
+        {{ tag.name }}
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+<!--resource-->
+    <link rel="stylesheet" type="text/css" href="{% static 'image_browser/css/style.css' %}">
+<!--===============================================================================================-->
+	<script src="{% static "javascript/jquery/jquery-3.2.1.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "javascript/token.js" %}"></script>
+<!--===============================================================================================-->
+    <script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
+    <script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+<!--===============================================================================================-->
+<!-- Core CSS file -->
+    <link rel="stylesheet" href="{% static 'photoswipe/photoswipe.css' %}">
+
+<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite,
+     - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="{% static 'photoswipe/default-skin/default-skin.css' %}">
+
+<!-- Core JS file -->
+    <script src="{% static 'photoswipe/photoswipe.min.js' %}"></script>
+
+<!-- UI JS file -->
+    <script src="{% static 'photoswipe/photoswipe-ui-default.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'image_browser/javascript/home.js' %}"></script>
+</body>
+</html>

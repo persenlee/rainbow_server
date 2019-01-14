@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册</title>
+</head>
+<body>
+<!-- multistep form -->
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form id="msform" method="post" action="sign_up">
+                {% csrf_token %}
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active">创建账号</li>
+                <li>激活邮箱</li>
+                <li>输入邀请码</li>
+              </ul>
+              <!-- fieldsets -->
+              <fieldset>
+                <h2 class="fs-title">创建你的账号</h2>
+                <h3 class="fs-subtitle">第一步</h3>
+                    <div class="wrap-input100 validate-input" data-validate = "有效的邮箱格式: a@b.c">
+						<input id="email" class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="请输入邮箱"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="密码长度不能小于6位">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="password" id="password">
+						<span class="focus-input100" data-placeholder="请输入密码"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="密码长度不能小于6位">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="confirm_password" id="confirm_password">
+						<span class="focus-input100" data-placeholder="再次确认密码"></span>
+					</div>
+                    <input type="button"  id="step1_next" class="next action-button" value="下一步" />
+					<!--<div class="container-login100-form-btn">-->
+						<!--<div class="wrap-login100-form-btn">-->
+							<!--<div class="login100-form-bgbtn"></div>-->
+							<!--<button class="login100-form-btn next" name="next">-->
+								<!--下一步-->
+							<!--</button>-->
+						<!--</div>-->
+					<!--</div>-->
+              </fieldset>
+              <fieldset>
+                <h2 class="fs-title">激活邮箱</h2>
+                  <p class="send-mail">
+                  <a class="fs-subtitle" href="send_mail" id="send_mail">
+							发送激活码到您的邮箱
+                  </a>
+                  </p>
+                <!--<h3 class="fs-subtitle">激活码已发送到您的邮箱</h3>-->
+                  <div class="wrap-input100 validate-input" data-validate = "请输入6位激活码">
+						<input class="input100" type="text" name="mail_code" id="mail-code">
+						<span class="focus-input100" data-placeholder="请输入激活码"></span>
+                 </div>
+
+                <input type="button"  class="previous action-button" value="上一步" />
+                <input type="button"  class="next action-button" value="下一步" id="step2-next"/>
+              </fieldset>
+              <fieldset>
+                <h2 class="fs-title">邀请码</h2>
+                <h3 class="fs-subtitle">请输入邀请码</h3>
+                <div class="wrap-input100 validate-input" data-validate = "请输入6位邀请码">
+						<input class="input100" type="text" name="invite_code">
+						<span class="focus-input100" data-placeholder="请输入邀请码"></span>
+                 </div>
+                <input type="button"  class="previous action-button" value="上一步" />
+                <input type="submit"  class="submit action-button" value="注册" />
+              </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "user/css/util.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "user/css/main.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "user/css/register.css" %}">
+    <script src="{% static "javascript/jquery/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "javascript/jquery/jquery.easing.js" %}"></script>
+    <script src="{% static "javascript/token.js" %}"></script>
+    <script src="{% static "user/javascript/main.js" %}"></script>
+    <script src="{% static "user/javascript/register.js" %}"></script>
+</body>
+</html>

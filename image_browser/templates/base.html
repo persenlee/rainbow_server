@@ -1,0 +1,31 @@
+{% load static %}
+{% load tags %}
+{% for image in image_list %}
+    <div class="item" id="item">
+     <div class="item-content">
+        <a  href="{{ image.src }}">
+          <img src="{{ image.thumb_src }}">
+        </a>
+        <div class="bar">
+             <a href="like" class="like" image-value="{{image.id}}" like-value="{{i_likes|get_item:image.id}}">
+                 {% if i_likes|get_item:image.id %}
+                <img class="like-on" src="{% static 'image_browser/images/heart-1.png' %}">
+                 {% else %}
+                <img class="like-off" src="{% static 'image_browser/images/heart-0.png' %}">
+                 {% endif %}
+             </a>
+            <span>&nbsp;{{ image_likes|get_item:image.id }}</span>
+            <ol class="tag-list">
+                {% for tag_id in image.tags|decode_json %}
+                <li class="tag" id-value="{{ tag_id }}">
+                    <a href="tag">{{tag_list|get_tag_name:tag_id}}</a>
+                </li>
+                {% endfor %}
+            </ol>
+            <a class="tag-add">
+                <img src="{% static 'image_browser/images/tag-add.png' %}">
+            </a>
+        </div>
+      </div>
+    </div>
+{% endfor %}
