@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from django.http import HttpResponseRedirect, HttpResponse;
+from django.http import HttpResponseRedirect, HttpResponse
 from user.models import MailCodeModel
 from user.models import UserModel
 from user.models import InvitationCodeModel
 from django.conf import settings
 from user.forms import *
-from django.contrib.auth.hashers import make_password,check_password
+from django.contrib.auth.hashers import make_password, check_password
 from django.urls import reverse
 from rest_framework.response import Response
 from rest_framework import status

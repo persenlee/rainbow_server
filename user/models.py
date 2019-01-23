@@ -1,12 +1,11 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
 from django.utils import timezone
+
 
 class UserModel(models.Model):
     class Meta:
         db_table = "user"
+
     id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=12)
     avatar = models.URLField()
@@ -23,6 +22,7 @@ class UserModel(models.Model):
 class UserLoginModel(models.Model):
     class Meta:
         db_table = "user_login"
+
     user = models.ForeignKey(
         'UserModel',
         on_delete=models.CASCADE,
@@ -34,16 +34,17 @@ class UserLoginModel(models.Model):
 class InvitationCodeModel(models.Model):
     class Meta:
         db_table = 'invitation_code'
+
     id = models.AutoField(primary_key=True)
     code = models.CharField(max_length=6)
     active = models.BooleanField(default=False)
-
 
 
 class CollectImagesModel(models.Model):
     class Meta:
         db_table = 'collect_images'
         unique_together = ("user", "image")
+
     user = models.ForeignKey(
         'UserModel',
         db_column='user_id',
@@ -54,13 +55,13 @@ class CollectImagesModel(models.Model):
         db_column='image_id',
         on_delete=models.CASCADE,
     )
+    create_time = models.DateTimeField(default=timezone.now())
 
 
 class MailCodeModel(models.Model):
     class Meta:
         db_table = 'mail_code'
+
     email = models.EmailField(unique=True)
     code = models.CharField(max_length=6)
     update_time = models.DateTimeField(default=timezone.now())
-
-

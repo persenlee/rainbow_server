@@ -1,16 +1,11 @@
-from django.shortcuts import render
-
-# Create your views here.
 from image_browser.models import Image, ImageLikeCount, ImageTags, Tags
 from django.shortcuts import render
 from image_browser.serializers import ImageSerializer
-from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
 from user.service import UserService
-from django.urls import reverse
 import json
 
 
@@ -54,7 +49,6 @@ def home(request):
     return render(request, 'home.html', context)
 
 
-
 def pageinator_range(current_page, number_page, start_page=1, slice=5):
     min_page = max(current_page - slice, start_page)
     max_page = min(current_page + slice, number_page)
@@ -72,6 +66,7 @@ def pageinator_range(current_page, number_page, start_page=1, slice=5):
             elif max_page + 1 < number_page:
                 max_page = max_page + 1
     return (min_page, max_page)
+
 
 @csrf_exempt
 def image_list(request):
@@ -134,7 +129,6 @@ def star(request):
         return HttpResponse(json.dumps(response), content_type='application/json')
 
 
-
 def add_tag(request):
     if request.method == 'POST':
         image_id = int(request.POST.get('image_id'))
@@ -151,6 +145,7 @@ def add_tag(request):
                 return HttpResponse(json.dumps(response), content_type='application/json')
     response = {'status': 0, 'message': "添加标签失败"}
     return HttpResponse(json.dumps(response), content_type='application/json')
+
 
 def report_page(request):
     context = {}
