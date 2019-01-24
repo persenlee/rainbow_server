@@ -19,5 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('image_browser/', include(('image_browser.urls', 'image_browser'), namespace='image_browser')),
-    path('user/', include(('user.urls', 'user'), namespace='user'))
+    path('user/', include(('user.urls', 'user'), namespace='user')),
+    path('feed/', include(('image_browser.urls', 'feed'), namespace='feed')),
 ]

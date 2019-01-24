@@ -144,23 +144,31 @@ def likes(request):
         like_relation = CollectImagesModel.objects.filter(user=user_id).order_by('create_time').values_list('image',
                                                                                                             flat=True)
         paginator = Paginator(like_relation, per_page)
-
         try:
             like_page = paginator.page(page)
         except PageNotAnInteger:
             like_page = paginator.page(1)
         except EmptyPage:
-            like_page = []
+            like_page = None
 
-        image_ids = like_page.object_list
-        # image_objs = Image.objects.filter(pk__in=image_ids)
-        image_id_strs = [str(x) for x in image_ids]
-        ids_str = "(%s)" % (','.join(image_id_strs))
-        sql = 'select image.id,image.title,image.src,image.thumb_src,image.tags,IFNULL(image_likes.count,0) as like_count \
-        from image  LEFT JOIN image_likes ON image.id=image_likes.image_id where id in %s' % ids_str
-        image_objs = Image.objects.raw(sql)
-        serializer = ImageSerializer(image_objs, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+        if like_page:
+            image_ids = like_page.object_list
+            image_id_str = [str(x) for x in image_ids]
+            ids_str = "(%s)" % (','.join(image_id_str))
+            sql = 'select ' \
+                  'image.id,' \
+                  'image.title,' \
+                  'image.src,' \
+                  'image.thumb_src,' \
+                  'image.tags,' \
+                  'ifnull(image_likes.count,0) as like_count '\
+                  'from image '\
+                  'left join image_likes ON image.id=image_likes.image_id '\
+                  'where id in %s' % ids_str
+            image_obj = Image.objects.raw(sql)
+            serializer = ImageSerializer(image_obj, many=True)
+            return Response(data=serializer.data, status=status.HTTP_200_OK)
+        return Response(status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
