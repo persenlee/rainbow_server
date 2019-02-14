@@ -26,7 +26,11 @@ def login(request):
         if user:
             check_pass = check_password(password, user.password)
             if check_pass:
-                return Response(status=status.HTTP_200_OK)
+                serializer = UserModelSerializer(user)
+                # if request.session.test_cookie_worked():
+                #     request.session.delete_test_cookie()
+                request.session['user_id'] = user.id
+                return Response(data=serializer.data, status=status.HTTP_200_OK)
         return Response(status=status.HTTP_404_NOT_FOUND)
     return Response(status=status.HTTP_400_BAD_REQUEST)
 

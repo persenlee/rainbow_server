@@ -61,7 +61,7 @@ def sign_up(request):
             user.save()
             if request.session.test_cookie_worked():
                 request.session.delete_test_cookie()
-                request.session['user_id'] = user.id;
+                request.session['user_id'] = user.id
             return HttpResponseRedirect(reverse('image_browser:home'))
 
     return render(request, 'register.html', {'form': form})

@@ -12,8 +12,8 @@ import json
 @api_view(['GET'])
 def feeds(request):
     if request.method == 'GET':
-        page = request.GET.get('page')
-        per_page = request.GET.get('per_page', 10)
+        page = int(request.GET.get('page'))
+        per_page = int(request.GET.get('per_page', 10))
         sql = 'select ' \
               'image.id,' \
               'image.title,' \
@@ -34,11 +34,11 @@ def feeds(request):
                   'image.thumb_src,' \
                   'image.tags,' \
                   'ifnull(image_likes.count,0) as like_count,' \
-                  '(case when t_likes.image_id is not null then true else false end) as like' \
+                  '(case when t_likes.image_id is not null then true else false end) as favorite ' \
                   'from image ' \
                   'left join image_likes on image.id=image_likes.image_id ' \
                   'left outer join ' \
-                  '(select image_id  from collect_images where collect_images.user_id=%@) t_likes ' \
+                  '(select image_id  from collect_images where collect_images.user_id=%d) t_likes ' \
                   'on image.id=t_likes.image_id ' \
                   'order by image.create_time' % (user_id)
 
