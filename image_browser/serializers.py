@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from image_browser.models import Image, Tags
+from image_browser.models import Image, Tags, Report
 
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -15,3 +15,9 @@ class TagsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tags
         fields = ('id', 'name')
+
+
+class ReportsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Report
+        fields = ('id', 'reason')

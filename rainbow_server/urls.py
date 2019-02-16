@@ -21,4 +21,5 @@ urlpatterns = [
     path('image_browser/', include(('image_browser.urls', 'image_browser'), namespace='image_browser')),
     path('user/', include(('user.urls', 'user'), namespace='user')),
     path('feed/', include(('image_browser.urls', 'feed'), namespace='feed')),
+    path('system/', include(('system.urls', 'system'), namespace='system')),
 ]
