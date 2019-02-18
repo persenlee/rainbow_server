@@ -30,7 +30,6 @@ class RegisterForm(forms.Form):
 
 
 class ProfileForm(forms.Form):
-    id = forms.IntegerField(required=True)
     name = forms.CharField(required=False)
     avatar = forms.CharField(required=False)
     age = forms.IntegerField(required=False)

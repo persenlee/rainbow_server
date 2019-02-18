@@ -113,7 +113,7 @@ def profile(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST or None)
         if form.is_valid():
-            user_id = form.cleaned_data.get('id', None)
+            user_id = request.session.get('user_id', None)
             user = UserModel.objects.filter(id=user_id).first()
             if user:
                 modified_dic = {k: v for k, v in form.cleaned_data.items() if v is not None and v != ''}
@@ -130,7 +130,7 @@ def profile(request):
     elif request.method == 'GET':
         form = ProfileForm(request.GET or None)
         if form.is_valid():
-            user_id = request.GET.get('id', None)
+            user_id = request.session.get('user_id', None)
             user = UserModel.objects.filter(id=user_id).first()
             if user:
                 serializer = UserModelSerializer(user)
@@ -142,7 +142,7 @@ def profile(request):
 @api_view(['GET'])
 def likes(request):
     if request.method == 'GET':
-        user_id = request.GET.get('id', None)
+        user_id = request.session.get('user_id', None)
         page = request.GET.get('page')
         per_page = request.GET.get('per_page', 10)
         like_relation = CollectImagesModel.objects.filter(user=user_id).order_by('create_time').values_list('image',
