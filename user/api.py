@@ -165,7 +165,8 @@ def likes(request):
                   'image.src,' \
                   'image.thumb_src,' \
                   'image.tags,' \
-                  'ifnull(image_likes.count,0) as like_count '\
+                  'ifnull(image_likes.count,0) as like_count,' \
+                  'true as favorite '\
                   'from image '\
                   'left join image_likes ON image.id=image_likes.image_id '\
                   'where id in %s' % ids_str

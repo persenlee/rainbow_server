@@ -18,7 +18,7 @@ class UserService:
         user = UserModel.objects.filter(id=user_id).first()
         if user and ImageService.image_is_exist(image_id):
             image = ImageService.request_image(image_id)
-            if collect and collect != '0':
+            if collect and collect != '0' and collect != 'false':
              collect_model = CollectImagesModel()
              collect_model.user = user
              collect_model.image = image
