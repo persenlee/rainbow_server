@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+from django.utils import timezone
 
 
 class Image(models.Model):
@@ -21,7 +22,9 @@ class ImageTags(models.Model):
         db_table = 'image_tags'
 
     image = models.IntegerField()
-    tag = models.IntegerField()
+    tags = models.CharField(max_length=64)
+    active = models.BooleanField(default=False)
+    create_time = models.DateTimeField(default=timezone.now())
 
 
 class Tags(models.Model):

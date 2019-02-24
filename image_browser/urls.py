@@ -9,6 +9,6 @@ urlpatterns = [
     re_path(r'add_tag/$', views.add_tag),
     path('feeds', api.feeds),
     path('like', api.like),
-    path('tag', api.tag),
+    path('tags', api.tags),
     path('report', api.report),
 ]

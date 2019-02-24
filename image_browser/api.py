@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
-from image_browser.models import Image, Tags, Report, ImageReport
+from image_browser.models import Image, Tags, Report, ImageReport, ImageTags
 from image_browser.serializers import ImageSerializer
 from user.service import UserService
 import json
@@ -77,20 +77,17 @@ def like(request):
 
 @api_view(['POST'])
 @csrf_exempt
-def tag(request):
+def tags(request):
     if request.method == 'POST':
         image_id = int(request.POST.get('id'))
-        tag_id = int(request.POST.get('tag_id'))
+        tag_ids = request.POST.get('tag_ids', None)
         image = Image.objects.filter(id=image_id).first()
-        image_tag = Tags.objects.filter(id=tag_id).first()
-        if image and image_tag:
-            tags = json.loads(image.tags) if image.tags else []
-            if tag_id not in tags:
-                tags.append(tag_id)
-                image.tags = json.dumps(tags)
-                image.save()
-                return Response(status=status.HTTP_200_OK)
-                return Response(status=status.HTTP_409_CONFLICT)
+        if tag_ids and tag_ids != '' and image:
+            record = ImageTags()
+            record.image = image_id
+            record.tags = tag_ids
+            record.save()
+            return Response(status=status.HTTP_200_OK)
         return Response(status=status.HTTP_404_NOT_FOUND)
     return Response(status=status.HTTP_400_BAD_REQUEST)
 
