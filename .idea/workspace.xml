@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2dcd4d9-2f1e-4615-bd3e-4ae6574fe660" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/image_browser/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_browser/migrations/0002_image_thumb_src.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_browser/migrations/0003_imagelikecount.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_browser/migrations/0004_image_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_browser/migrations/0005_auto_20190224_1229.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0002_auto_20190123_0606.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainbow_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rainbow_server/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,16 +73,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rainbow_server/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="662">
+              <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/migrations/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -117,7 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onscrollonscroll</find>
       <find>box</find>
       <find>responsive</find>
       <find>main-content</find>
@@ -147,6 +140,7 @@
       <find>cookie</find>
       <find>self.data</find>
       <find>401</find>
+      <find>STATIC_ROOT</find>
     </findStrings>
     <replaceStrings>
       <replace>../static</replace>
@@ -236,6 +230,16 @@
               <item name="image_browser" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -308,6 +312,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25369978" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -686,13 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rainbow_server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image_browser/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -702,6 +700,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainbow_server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
