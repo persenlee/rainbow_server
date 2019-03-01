@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^pusja)adcm@tevqsb)*h!^c*-dznxsnwkq4g1i9735%(mapmo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['13.58.37.177']
 
 # Application definition
 
@@ -154,3 +154,5 @@ CACHES = {
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_COOKIE_AGE = 1209600  # 2 weak
 # SESSION_CACHE_ALIAS = "default"
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
