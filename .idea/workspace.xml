@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2dcd4d9-2f1e-4615-bd3e-4ae6574fe660" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/rainbow_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rainbow_server/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="e2dcd4d9-2f1e-4615-bd3e-4ae6574fe660" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
