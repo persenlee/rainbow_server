@@ -128,15 +128,15 @@ def profile(request):
             return Response(status=status.HTTP_404_NOT_FOUND)
         Response(status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'GET':
-        form = ProfileForm(request.GET or None)
-        if form.is_valid():
-            user_id = request.session.get('user_id', None)
+        user_id = request.session.get('user_id', None)
+        if user_id:
             user = UserModel.objects.filter(id=user_id).first()
             if user:
                 serializer = UserModelSerializer(user)
                 return Response(data=serializer.data, status=status.HTTP_200_OK)
             return Response(status=status.HTTP_404_NOT_FOUND)
-    return Response(status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
 
 
 @api_view(['GET'])
@@ -166,9 +166,9 @@ def likes(request):
                   'image.thumb_src,' \
                   'image.tags,' \
                   'ifnull(image_likes.count,0) as like_count,' \
-                  'true as favorite '\
-                  'from image '\
-                  'left join image_likes ON image.id=image_likes.image_id '\
+                  'true as favorite ' \
+                  'from image ' \
+                  'left join image_likes ON image.id=image_likes.image_id ' \
                   'where id in %s' % ids_str
             image_obj = Image.objects.raw(sql)
             serializer = ImageSerializer(image_obj, many=True)
