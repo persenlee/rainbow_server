@@ -82,15 +82,13 @@ body {
 }
 
 .header-content .flamyngo-name {
-    color: #3d444e;
-    display: none;
+    color: #2d285a;
     font-family: "gt-walsheim", "europaregular", helvetica, arial;
     font-size: 18px;
     font-weight: normal;
     line-height: 30px;
     margin: 0;
     margin-left: 10px;
-    text-transform: uppercase;
 }
 
 .wrapper {
@@ -136,7 +134,7 @@ div {
 }
 
 .app-page .get-app {
-    background-color: #4a90e2;
+    background-color: #2d285a;
     border: 0;
     border-radius: 2px;
     bottom: 50px;
