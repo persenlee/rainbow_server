@@ -169,7 +169,8 @@ def likes(request):
                   'true as favorite ' \
                   'from image ' \
                   'left join image_likes ON image.id=image_likes.image_id ' \
-                  'where id in %s' % ids_str
+                  'where id in %s ' \
+                  'order by image.create_time desc' % ids_str
             image_obj = Image.objects.raw(sql)
             serializer = ImageSerializer(image_obj, many=True)
             return Response(data=serializer.data, status=status.HTTP_200_OK)

@@ -23,7 +23,7 @@ def feeds(request):
               'ifnull(image_likes.count,0) as like_count ' \
               'from image ' \
               'left join image_likes on image.id=image_likes.image_id ' \
-              'order by image.create_time'
+              'order by image.create_time desc'
 
         user_id = request.session.get('user_id', None)
         if user_id:
@@ -40,7 +40,7 @@ def feeds(request):
                   'left outer join ' \
                   '(select image_id  from collect_images where collect_images.user_id=%d) t_likes ' \
                   'on image.id=t_likes.image_id ' \
-                  'order by image.create_time' % (user_id)
+                  'order by image.create_time desc' % (user_id)
 
         image_list = Image.objects.raw(sql)
         paginator = Paginator(image_list, per_page)
