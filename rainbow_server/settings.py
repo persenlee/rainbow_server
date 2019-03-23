@@ -24,7 +24,7 @@ SECRET_KEY = '^pusja)adcm@tevqsb)*h!^c*-dznxsnwkq4g1i9735%(mapmo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['www.rainbowplanet.club']
 
 # Application definition
 

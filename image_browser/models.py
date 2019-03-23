@@ -11,7 +11,7 @@ class Image(models.Model):
 
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=128)
-    src = models.CharField(max_length=512)
+    src = models.CharField(max_length=255, unique=True)
     create_time = models.DateTimeField()
     thumb_src = models.CharField(max_length=512)
     tags = models.CharField(max_length=128, default='')
