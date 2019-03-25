@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^pusja)adcm@tevqsb)*h!^c*-dznxsnwkq4g1i9735%(mapmo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.rainbowplanet.club']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'rainbow_server.request_interceptor.request_interceptor_middleware'
 ]
 
 ROOT_URLCONF = 'rainbow_server.urls'
@@ -79,7 +81,7 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bearhub',
+        'NAME': 'rainbow',
         'USER': 'root',
         'PASSWORD': '123456',
         'HOST': 'localhost',
@@ -157,4 +159,4 @@ SESSION_COOKIE_AGE = 1209600  # 2 weak
 # SESSION_CACHE_ALIAS = "default"
 
 #only use for relase
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
