@@ -114,9 +114,17 @@ div {
 }
 
 .app-page .title {
-    color: #3d444e;
+    color: #2d285a;
     font-family: "gt-walsheim", "europaregular", helvetica, arial;
     font-size: 38px;
+    line-height: 1.2em;
+    margin-top: 20px;
+}
+
+.app-page .subtitle {
+    color: #2d285a;
+    font-family: "gt-walsheim", "europaregular", helvetica, arial;
+    font-size: 32px;
     line-height: 1.2em;
     margin-top: 20px;
 }

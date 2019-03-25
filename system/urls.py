@@ -5,5 +5,6 @@ from  system import  views
 urlpatterns = [
     path('config', api.config),
     path('landing', views.landing_page),
+    path('legal', views.legal_page),
     path('upload_token', api.upload_token)
 ]

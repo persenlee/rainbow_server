@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2dcd4d9-2f1e-4615-bd3e-4ae6574fe660" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/system/static/system/javascript/landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_browser/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_browser/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/static/system/css/land.css" beforeDir="false" afterPath="$PROJECT_DIR$/system/static/system/css/land.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/static/system/images/feed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/system/static/system/images/feed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/static/system/javascript/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/system/static/system/javascript/landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/templates/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/system/templates/landing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,20 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image_browser/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rainbow_server/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="-38">
+              <caret line="133" column="34" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -45,8 +41,35 @@
       <file leaf-file-name="landing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/templates/landing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+            <state relative-caret-position="315">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="land.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/static/system/css/land.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -54,8 +77,17 @@
       <file leaf-file-name="landing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/static/system/javascript/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="255">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -63,24 +95,8 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image_browser/static/image_browser/javascript/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="810">
               <caret line="54" column="11" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile-detect.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/mobile-detect.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14365" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -88,8 +104,8 @@
       <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image_browser/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="345">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -106,7 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>openPhotoSwipe</find>
       <find>closest</find>
       <find>parseThumbnailElements</find>
       <find>paginator</find>
@@ -136,6 +151,7 @@
       <find>flamyngo-logo</find>
       <find>rain</find>
       <find>getPath</find>
+      <find>title</find>
     </findStrings>
     <replaceStrings>
       <replace>../static</replace>
@@ -187,16 +203,16 @@
         <option value="$PROJECT_DIR$/image_browser/migrations/0005_auto_20190224_1229.py" />
         <option value="$PROJECT_DIR$/system/api.py" />
         <option value="$PROJECT_DIR$/system/apps.py" />
-        <option value="$PROJECT_DIR$/system/views.py" />
-        <option value="$PROJECT_DIR$/system/urls.py" />
-        <option value="$PROJECT_DIR$/system/static/system/css/land.css" />
         <option value="$PROJECT_DIR$/image_browser/urls.py" />
         <option value="$PROJECT_DIR$/user/urls.py" />
-        <option value="$PROJECT_DIR$/image_browser/api.py" />
         <option value="$PROJECT_DIR$/user/api.py" />
         <option value="$PROJECT_DIR$/image_browser/models.py" />
+        <option value="$PROJECT_DIR$/image_browser/api.py" />
         <option value="$PROJECT_DIR$/system/templates/landing.html" />
+        <option value="$PROJECT_DIR$/system/static/system/css/land.css" />
         <option value="$PROJECT_DIR$/system/static/system/javascript/landing.js" />
+        <option value="$PROJECT_DIR$/system/views.py" />
+        <option value="$PROJECT_DIR$/system/urls.py" />
         <option value="$PROJECT_DIR$/rainbow_server/settings.py" />
       </list>
     </option>
@@ -266,6 +282,35 @@
               <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rainbow_server" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rainbow_server" type="b2602c69:ProjectViewProjectNode" />
@@ -346,15 +391,15 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25369978" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25369978" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50069445" side_tool="true" weight="0.3272727" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.18909091" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.18846154" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32948717" />
       <window_info id="Structure" order="1" sideWeight="0.501006" side_tool="true" weight="0.25369978" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.22820513" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35384616" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35384616" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -532,20 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/static/user/images/error.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -587,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/static/system/css/land.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image_browser/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -608,40 +632,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_browser/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2445">
-          <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image_browser/migrations/0002_auto_20190321_1359.py" />
     <entry file="file://$PROJECT_DIR$/image_browser/migrations/0001_initial.py" />
-    <entry file="file://$PROJECT_DIR$/image_browser/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/mobile-detect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14365" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/image_browser/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -657,31 +651,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/templates/landing.html">
+    <entry file="file://$PROJECT_DIR$/image_browser/static/image_browser/javascript/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+        <state relative-caret-position="810">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image_browser/static/image_browser/javascript/home.js">
+    <entry file="file://$PROJECT_DIR$/image_browser/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="11" />
+        <state relative-caret-position="368">
+          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2445">
+          <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image_browser/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/static/system/javascript/landing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="255">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/templates/landing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/static/system/css/land.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rainbow_server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="-38">
+          <caret line="133" column="34" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="34" />
         </state>
       </provider>
     </entry>

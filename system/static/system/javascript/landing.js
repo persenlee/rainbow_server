@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
       }
     var client = judgeClient()
     if(client == 'iOS')
-        $(".get-app").attr("href","https://itunes.apple.com/us/app/apple-store/id1057900220?pt=118033742&amp;ct=Homepage&amp;mt=8");
+        $(".get-app").attr("href","https://itunes.apple.com/us/app/apple-store/id1457436405?pt=118033742&amp;ct=Homepage&amp;mt=8");
     else
         $(".get-app").attr("href","https://fir.im/npjf");
 })

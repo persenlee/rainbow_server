@@ -7,3 +7,10 @@ def landing_page(request):
     }
     return render(request, 'landing.html', context)
 
+
+
+def legal_page(request):
+    context = {
+    }
+    return render(request, 'legal.html', context)
+

@@ -106,8 +106,9 @@ def report(request):
                 image_report = ImageReport()
                 image_report.image = image_id
                 image_report.report = report_id
-                image_report.detail = report_reason
-                image.save()
+                if report_reason is not None:
+                    image_report.detail = report_reason
+                image_report.save()
                 return Response(status=status.HTTP_200_OK)
             return Response(status=status.HTTP_404_NOT_FOUND)
     return Response(status=status.HTTP_400_BAD_REQUEST)
